@@ -7,7 +7,7 @@ function App() {
       <div 
         className="fixed inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url(https://i.imgur.com/Nc4ZarS.jpg)',
+          backgroundImage: 'url(https://i.imgur.com/2M61KHQ.jpg)',
         }}
       >
         <div className="absolute inset-0 bg-black/50" /> {/* Dark overlay */}
