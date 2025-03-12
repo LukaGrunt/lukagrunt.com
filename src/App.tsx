@@ -7,20 +7,13 @@ function App() {
       <div 
         className="fixed inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('/background.jpg')`,
+          backgroundImage: 'url("https://i.imgur.com/Nc4ZarS.jpg")',
         }}
       >
         <div className="absolute inset-0 bg-black/50" /> {/* Dark overlay */}
       </div>
 
       <main className="relative z-10 w-full min-h-screen flex flex-col items-center justify-center px-4">
-        {/* Animated Hello Text */}
-        <div className="mb-16">
-          <h1 className="text-6xl md:text-8xl font-bold text-white animate-breathe">
-            HELLO
-          </h1>
-        </div>
-
         {/* X Button - Centered */}
         <div className="mb-8">
           <a 
@@ -29,11 +22,7 @@ function App() {
             rel="noopener noreferrer"
             className="w-[250px] h-[100px] bg-black/80 backdrop-blur-sm rounded-[15px] flex items-center justify-center transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
           >
-            <img 
-              src="/x-logo.png"
-              alt="X Logo"
-              className="w-[50px] h-[50px] object-contain"
-            />
+            <span className="text-white text-5xl font-bold">X</span>
           </a>
         </div>
 
