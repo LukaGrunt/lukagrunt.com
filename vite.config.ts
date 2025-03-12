@@ -3,19 +3,21 @@ import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // Use this if your GitHub repository is named "lukagrunt.com"
-  base: '/lukagrunt.com/',  // Make sure the base path is correct for GitHub Pages
-
   plugins: [react()],
+  base: 'https://lukagrunt.com/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
     minify: 'terser',
-    sourcemap: false,
+    sourcemap: true, // Enable sourcemaps for debugging
     rollupOptions: {
       output: {
         manualChunks: undefined,
       },
     },
+  },
+  server: {
+    port: 3000,
+    open: true,
   },
 });
