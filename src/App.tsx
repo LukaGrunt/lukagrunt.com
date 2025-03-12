@@ -7,24 +7,13 @@ function App() {
       <div 
         className="fixed inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url("https://i.imgur.com/2M61KHQ.jpg")',
+          backgroundImage: 'url("https://i.imgur.com/2M8KHQ.jpg")',
         }}
       >
         <div className="absolute inset-0 bg-black/50" /> {/* Dark overlay */}
       </div>
 
       <main className="relative z-10 w-full min-h-screen flex flex-col items-center justify-center px-4 translate-y-[160px]">
-        {/* Text - Above buttons */}
-        <div className="mb-8 text-center w-full">
-          <div className="md:hidden text-2xl font-bold text-white space-y-2">
-            <div>TOOLS FOR THE CROWD,</div>
-            <div>BROUGHT TO LIFE!</div>
-          </div>
-          <div className="hidden md:block text-4xl font-bold text-white">
-            TOOLS FOR THE CROWD, BROUGHT TO LIFE!
-          </div>
-        </div>
-
         {/* Other Buttons - In a row */}
         <div className="flex flex-col md:flex-row gap-8 items-center justify-center mb-8">
           {/* A Secret Button */}
@@ -54,6 +43,17 @@ function App() {
           >
             <span className="text-white text-5xl font-bold">X</span>
           </a>
+        </div>
+
+        {/* Text - Below buttons */}
+        <div className="mt-8 text-center w-full">
+          <div className="md:hidden text-2xl font-bold text-white space-y-2">
+            <div>TOOLS FOR THE CROWD,</div>
+            <div>BROUGHT TO LIFE!</div>
+          </div>
+          <div className="hidden md:block text-4xl font-bold text-white">
+            TOOLS FOR THE CROWD, BROUGHT TO LIFE!
+          </div>
         </div>
       </main>
     </div>
