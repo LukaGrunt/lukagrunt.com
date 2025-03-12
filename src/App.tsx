@@ -2,67 +2,65 @@ import React from 'react';
 
 function App() {
   return (
-    <div className="fixed inset-0 w-screen h-screen overflow-hidden">
-      {/* Background Image */}
+    <div className="min-h-screen w-full overflow-hidden bg-black">
+      {/* Background Image with Overlay */}
       <div 
-        className="absolute inset-0 bg-brand-orange"
+        className="fixed inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url('/background.jpg')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
         }}
-      />
+      >
+        <div className="absolute inset-0 bg-black/50" /> {/* Dark overlay */}
+      </div>
 
-      <div className="relative h-full flex flex-col">
+      <main className="relative z-10 w-full min-h-screen flex flex-col items-center justify-center px-4">
         {/* Animated Hello Text */}
-        <div className="w-full pt-8 md:pt-16">
-          <div className="breathe-animation">
-            <span>HELLO</span>
-          </div>
+        <div className="mb-16">
+          <h1 className="text-6xl md:text-8xl font-bold text-white animate-breathe">
+            HELLO
+          </h1>
         </div>
 
-        {/* Content Container */}
-        <div className="flex-1 flex flex-col items-center justify-center">
-          {/* Buttons Container - Positioned in center for desktop, bottom for mobile */}
-          <div className="w-full flex flex-col items-center gap-6 mt-auto md:mt-0 mb-8 md:mb-0">
-            {/* X Logo Button */}
-            <a 
-              href="https://x.com/LukaGrunt"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-[250px] h-[60px] md:h-[80px] bg-black rounded-[15px] flex items-center justify-center transform hover:scale-110 transition-transform duration-200 shadow-custom"
-            >
-              <img 
-                src="/x-logo.png"
-                alt="X Logo"
-                className="w-[30px] md:w-[40px] h-[30px] md:h-[40px] object-contain"
-              />
-            </a>
+        {/* X Button - Centered */}
+        <div className="mb-8">
+          <a 
+            href="https://x.com/LukaGrunt"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-[250px] h-[100px] bg-black/80 backdrop-blur-sm rounded-[15px] flex items-center justify-center transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+          >
+            <img 
+              src="/x-logo.png"
+              alt="X Logo"
+              className="w-[50px] h-[50px] object-contain"
+            />
+          </a>
+        </div>
 
-            {/* A Secret Button */}
-            <button 
-              className="w-[250px] h-[60px] md:h-[80px] bg-brand-blue rounded-[15px] text-white font-bold text-[24px] md:text-[30px] transform hover:scale-110 transition-transform duration-200 shadow-custom"
-            >
-              A SECRET
-            </button>
+        {/* Other Buttons - In a row */}
+        <div className="flex flex-col md:flex-row gap-6 items-center justify-center">
+          {/* A Secret Button */}
+          <button 
+            className="w-[250px] h-[100px] bg-blue-600 rounded-[15px] text-white font-bold text-[30px] transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+          >
+            A SECRET
+          </button>
 
-            {/* Soon Button */}
-            <button 
-              className="w-[250px] h-[60px] md:h-[80px] bg-brand-red rounded-[15px] text-white font-bold text-[24px] md:text-[30px] transform hover:scale-110 transition-transform duration-200 shadow-custom"
-            >
-              SOON...
-            </button>
-          </div>
+          {/* Soon Button */}
+          <button 
+            className="w-[250px] h-[100px] bg-red-600 rounded-[15px] text-white font-bold text-[30px] transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+          >
+            SOON...
+          </button>
         </div>
 
         {/* Bottom Text */}
-        <div className="w-full pb-4 md:pb-8">
-          <h2 className="text-white text-[24px] md:text-[35px] font-bold text-center px-4">
+        <div className="mt-16 text-center">
+          <p className="text-2xl md:text-4xl font-bold text-white">
             TOOLS FOR THE CROWD, BROUGHT TO LIFE!
-          </h2>
+          </p>
         </div>
-      </div>
+      </main>
     </div>
   );
 }

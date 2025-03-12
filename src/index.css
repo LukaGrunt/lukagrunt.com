@@ -67,3 +67,27 @@ html, body {
     box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.25);
   }
 }
+
+@keyframes breathe {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-breathe {
+  animation: breathe 3s ease-in-out infinite;
+}
+
+/* Custom background gradient */
+.bg-gradient-custom {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+}

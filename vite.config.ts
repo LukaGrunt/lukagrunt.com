@@ -7,4 +7,15 @@ export default defineConfig({
   base: '/lukagrunt.com/',  // Make sure the base path is correct for GitHub Pages
 
   plugins: [react()],
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    minify: 'terser',
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
+  },
 });
