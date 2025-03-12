@@ -13,9 +13,9 @@ function App() {
         <div className="absolute inset-0 bg-black/50" /> {/* Dark overlay */}
       </div>
 
-      <main className="relative z-10 w-full min-h-screen flex flex-col items-center justify-center px-4">
+      <main className="relative z-10 w-full min-h-screen flex flex-col items-center justify-center px-4 translate-y-20">
         {/* X Button - Centered */}
-        <div className="mb-8">
+        <div className="mb-12">
           <a 
             href="https://x.com/LukaGrunt"
             target="_blank"
@@ -44,7 +44,7 @@ function App() {
         </div>
 
         {/* Bottom Text */}
-        <div className="mt-16 text-center">
+        <div className="mt-20 text-center">
           <p className="text-2xl md:text-4xl font-bold text-white">
             TOOLS FOR THE CROWD, BROUGHT TO LIFE!
           </p>
