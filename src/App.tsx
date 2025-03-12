@@ -7,13 +7,13 @@ function App() {
       <div 
         className="fixed inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url(https://i.imgur.com/2M61KHQ.jpg)',
+          backgroundImage: "url('https://i.imgur.com/2M61KHQ.jpg')",
         }}
       >
         <div className="absolute inset-0 bg-black/50" /> {/* Dark overlay */}
       </div>
 
-      <main className="relative z-10 w-full min-h-screen flex flex-col items-center justify-center px-4 translate-y-[120px]">
+      <main className="relative z-10 w-full min-h-screen flex flex-col items-center justify-center px-4 translate-y-[160px]">
         {/* Other Buttons - In a row */}
         <div className="flex flex-col md:flex-row gap-8 items-center justify-center mb-8">
           {/* A Secret Button */}
