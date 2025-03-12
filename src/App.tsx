@@ -13,7 +13,7 @@ function App() {
         <div className="absolute inset-0 bg-black/50" /> {/* Dark overlay */}
       </div>
 
-      <main className="relative z-10 w-full min-h-screen flex flex-col items-center justify-center px-4 translate-y-[160px] md:translate-y-[160px] translate-y-[100px]">
+      <main className="relative z-10 w-full min-h-screen flex flex-col items-center justify-center px-4 translate-y-[100px] md:translate-y-[160px]">
         {/* All Buttons - Stacked on mobile, row on desktop */}
         <div className="flex flex-col gap-8 items-center justify-center">
           {/* Top Buttons - Always in column on mobile, row on desktop */}
@@ -49,11 +49,14 @@ function App() {
         </div>
 
         {/* Bottom Text - Split into two lines on mobile */}
-        <div className="mt-12 text-center">
-          <p className="text-3xl md:text-4xl font-bold text-white flex flex-col md:block">
-            <span className="block md:inline">TOOLS FOR THE CROWD,</span>
-            <span className="block md:inline mt-2 md:mt-0 md:ml-2">BROUGHT TO LIFE!</span>
-          </p>
+        <div className="mt-12 text-center w-full">
+          <div className="md:hidden text-2xl font-bold text-white space-y-2">
+            <div>TOOLS FOR THE CROWD,</div>
+            <div>BROUGHT TO LIFE!</div>
+          </div>
+          <div className="hidden md:block text-4xl font-bold text-white">
+            TOOLS FOR THE CROWD, BROUGHT TO LIFE!
+          </div>
         </div>
       </main>
     </div>
