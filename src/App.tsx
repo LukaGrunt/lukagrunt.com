@@ -13,9 +13,9 @@ function App() {
         <div className="absolute inset-0 bg-black/50" /> {/* Dark overlay */}
       </div>
 
-      <main className="relative z-10 w-full min-h-screen flex flex-col items-center justify-start px-4 pt-[30vh]">
+      <main className="relative z-10 w-full min-h-screen flex flex-col items-center justify-center px-4 translate-y-[120px]">
         {/* Other Buttons - In a row */}
-        <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
+        <div className="flex flex-col md:flex-row gap-8 items-center justify-center mb-8">
           {/* A Secret Button */}
           <button 
             className="w-[250px] h-[100px] rounded-[15px] text-white font-bold text-[30px] transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
@@ -34,7 +34,7 @@ function App() {
         </div>
 
         {/* X Button - Centered */}
-        <div className="my-8">
+        <div className="mb-8">
           <a 
             href="https://x.com/LukaGrunt"
             target="_blank"
