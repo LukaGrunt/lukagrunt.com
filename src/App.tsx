@@ -7,7 +7,7 @@ function App() {
       <div 
         className="fixed inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url("https://i.imgur.com/Nc4ZarS.jpg")',
+          backgroundImage: 'url(https://i.imgur.com/Nc4ZarS.jpg)',
         }}
       >
         <div className="absolute inset-0 bg-black/50" /> {/* Dark overlay */}
@@ -30,14 +30,16 @@ function App() {
         <div className="flex flex-col md:flex-row gap-6 items-center justify-center">
           {/* A Secret Button */}
           <button 
-            className="w-[250px] h-[100px] bg-blue-600 rounded-[15px] text-white font-bold text-[30px] transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+            className="w-[250px] h-[100px] rounded-[15px] text-white font-bold text-[30px] transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+            style={{ backgroundColor: '#5F89B0' }}
           >
             A SECRET
           </button>
 
           {/* Soon Button */}
           <button 
-            className="w-[250px] h-[100px] bg-red-600 rounded-[15px] text-white font-bold text-[30px] transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+            className="w-[250px] h-[100px] rounded-[15px] text-white font-bold text-[30px] transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+            style={{ backgroundColor: '#B1413C' }}
           >
             SOON...
           </button>
