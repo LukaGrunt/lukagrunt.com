@@ -13,7 +13,7 @@ function App() {
         <div className="absolute inset-0 bg-black/50" /> {/* Dark overlay */}
       </div>
 
-      <main className="relative z-10 w-full min-h-screen flex flex-col items-center justify-center px-4 translate-y-20">
+      <main className="relative z-10 w-full min-h-screen flex flex-col items-center justify-center px-4 translate-y-[160px]">
         {/* Other Buttons - In a row */}
         <div className="flex flex-col md:flex-row gap-6 items-center justify-center mb-12">
           {/* A Secret Button */}
