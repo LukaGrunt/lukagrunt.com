@@ -16,13 +16,14 @@ function App() {
       <main className="relative z-10 w-full min-h-screen flex flex-col items-center justify-center px-4 translate-y-[160px]">
         {/* Other Buttons - In a row */}
         <div className="flex flex-col md:flex-row gap-8 items-center justify-center mb-8">
-          {/* A Secret Button */}
-          <button 
-            className="w-[250px] h-[100px] rounded-[15px] text-white font-bold text-[30px] transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+          {/* Crowd Spin Button */}
+          <a 
+            href="/crowd-spin"
+            className="w-[250px] h-[100px] rounded-[15px] text-white font-bold text-[30px] transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center"
             style={{ backgroundColor: '#5F89B0' }}
           >
-            A SECRET
-          </button>
+            CROWD SPIN
+          </a>
 
           {/* Soon Button */}
           <button 
