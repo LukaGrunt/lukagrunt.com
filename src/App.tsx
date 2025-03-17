@@ -18,7 +18,7 @@ function App() {
         <div className="flex flex-col md:flex-row gap-8 items-center justify-center mb-8">
           {/* Crowd Spin Button */}
           <a 
-            href="/crowd-spin"
+            href="/crowdspin/"
             className="w-[250px] h-[100px] rounded-[15px] text-white font-bold text-[30px] transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center"
             style={{ backgroundColor: '#5F89B0' }}
           >
