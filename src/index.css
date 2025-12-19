@@ -1,93 +1,103 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'TheFont';
-  src: url("https://garet.typeforward.com/assets/fonts/shared/TFMixVF.woff2") format('woff2');
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background-color: black;
-}
-
-.breathe-animation {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.breathe-animation span {
-  font-family: 'TheFont';
-  font-size: clamp(40px, 10vw, 120px);
-  color: white;
-  text-align: center;
-  animation: letter-breathe 3s ease-in-out infinite;
-  white-space: nowrap;
-  display: block;
-}
-
-@keyframes letter-breathe {
-  from,
-  to {
-    font-variation-settings: 'wght' 100;
+@layer base {
+  * {
+    @apply box-border;
   }
-  50% {
-    font-variation-settings: 'wght' 900;
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-bg-deep text-text font-body antialiased;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
   }
 }
 
-.shadow-custom {
-  box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+@layer utilities {
+  /* Noise Texture Overlay */
+  .noise-texture::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' /%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Glassmorphism */
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+
+  .glass-strong {
+    @apply bg-white/10 backdrop-blur-xl border border-white/20;
+  }
+
+  /* Gradient Mesh Backgrounds */
+  .gradient-mesh {
+    background: radial-gradient(at 20% 30%, rgba(249, 115, 22, 0.15) 0px, transparent 50%),
+                radial-gradient(at 80% 70%, rgba(185, 28, 28, 0.15) 0px, transparent 50%),
+                radial-gradient(at 50% 50%, rgba(39, 39, 42, 0.3) 0px, transparent 50%);
+  }
+
+  /* Magnetic Button Base */
+  .magnetic-btn {
+    @apply transition-transform duration-200 ease-out;
+  }
+
+  /* Text Gradients */
+  .text-gradient-orange {
+    @apply bg-gradient-to-r from-primary via-orange-500 to-amber-400 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-glow {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
 }
 
-/* Mobile adjustments */
+/* Mobile responsive font sizes */
 @media (max-width: 768px) {
-  .breathe-animation span {
-    font-size: clamp(30px, 8vw, 80px);
+  .text-display {
+    font-size: 60px;
   }
-  
-  .shadow-custom {
-    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.25);
+
+  .text-h1 {
+    font-size: 48px;
+  }
+
+  .text-h2 {
+    font-size: 32px;
+  }
+
+  .text-h3 {
+    font-size: 24px;
   }
 }
 
-@keyframes breathe {
-  0% {
-    opacity: 1;
-    transform: scale(1);
+@media (min-width: 769px) and (max-width: 1024px) {
+  .text-display {
+    font-size: 90px;
   }
-  50% {
-    opacity: 0.8;
-    transform: scale(1.05);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
 
-.animate-breathe {
-  animation: breathe 3s ease-in-out infinite;
-}
+  .text-h1 {
+    font-size: 60px;
+  }
 
-/* Custom background gradient */
-.bg-gradient-custom {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+  .text-h2 {
+    font-size: 40px;
+  }
 }
