@@ -8,7 +8,7 @@ export const cvData: CVData = {
     bio: 'Social and community lead with 6+ years in Bitcoin and Web3. Specializes in building scalable communication systems: editorial pipelines, announcement frameworks, KOL outreach engines, partner comms, and community activation loops. Proven growth across multiple projects. Strong long-form writer with published blogs, product updates, governance posts, threads, and documentation. Former Staff Sergeant with disciplined execution, leadership, and cross-team coordination. Leverages AI daily for writing, editing, planning, analysis, and small coding tasks.',
     twitterHandle: '@LukaGrunt',
     twitterUrl: 'https://x.com/LukaGrunt',
-    twitterFollowers: '~8,200',
+    twitterFollowers: '7,973',
   },
   workExperience: [
     {
